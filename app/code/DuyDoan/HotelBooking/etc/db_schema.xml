@@ -1,0 +1,18 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="hotel_entity" engine="innodb" resource="default" comment="Hotel Entity Table">
+        <column name="hotel_id" xsi:type="int" identity="true" nullable="false" />
+        <column name="hotel_name" xsi:type="varchar" length="100" nullable="true" />
+        <column name="location_street" xsi:type="text" nullable="true" />
+        <column name="location_city" xsi:type="varchar" length="50" nullable="true" />
+        <column name="location_state" xsi:type="varchar" length="50" nullable="true" />
+        <column name="location_country" xsi:type="varchar" length="10" nullable="true" />
+        <column name="contact_phone" xsi:type="varchar" length="20" nullable="true" />
+        <column name="total_available_room" xsi:type="tinyint" nullable="true" />
+        <column name="available_single" xsi:type="tinyint" nullable="true" />
+        <column name="available_double" xsi:type="tinyint" nullable="true" />
+        <column name="available_triple" xsi:type="tinyint" nullable="true" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="hotel_id"/>
+        </constraint>
+    </table>
+</schema>
